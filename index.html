@@ -11,17 +11,30 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
+
 <body style="background-image:url(https://images.unsplash.com/photo-1783228601233-d74b91f4c4b7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;"
 class = "flex justify-center h-screen items-center"
 >
-    <div class="bg -white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
+    <div class="bg-white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
     id="kartu">
         <h1 class="text-4xl font-bold animate__animated animate__bounce">Happy Birthday</h1>
         <h1 class="text-xl animate__animated animate__shakeX animate__infinite">From Atiq</h1>
         <button 
         class= "p-2 bg-slate-600 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-2s animate__tada" onclick="ubahkartu()">Klik di sini ya</button>
     </div>
+<div id="video" class="text-center mt-10" style="display:none;">
+    <h1 class="text-3xl font-bold text-white mb-5">
+        Video Untuk Awak 🎬
+    </h1>
 
+    <video 
+        width="320" 
+        controls 
+        class="rounded-xl shadow-lg mx-auto">
+        <source src="video.mp4" type="video/mp4">
+        Browser anda tidak support video.
+    </video>
+</div>
     <script
             src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@4.3.1/tsparticles.confetti.bundle.min.js"></script>
             <script>confetti({
@@ -47,13 +60,26 @@ function ubahkartu() {
             - Dari: Atiq -
         </h2>
         <button 
-        class= "p-2 bg-blue-900 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-2s animate__tada" onclick="refresh()">Tutup</button>
-    `;
-    
+class="p-2 bg-blue-900 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-2s animate__tada" 
+onclick="refresh()">
+Tutup
+</button>
+
+<button 
+class="p-2 bg-pink-600 text-white rounded mt-3 hover:bg-pink-800 transition ease-in w-full animate__animated animate__fadeIn"
+onclick="showVideo()">
+Tengok Video 🎥
+</button>
+ `;   
 }
 function refresh(){
         location.reload();
     }
+ function showVideo(){
+    let video = document.getElementById("video");
+    video.style.display = "block";
+    video.classList.add("animate__animated", "animate__zoomIn");
+}
 
 </script>
            
