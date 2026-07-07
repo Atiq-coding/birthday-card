@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD LAYLA dari Atiq</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body style="background-image:url(https://images.unsplash.com/photo-1783228601233-d74b91f4c4b7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;"
+class = "flex justify-center h-screen items-center"
+>
+    <div class="bg -white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
+    id="kartu">
+        <h1 class="text-4xl font-bold animate__animated animate__bounce">Happy Birthday</h1>
+        <h1 class="text-xl animate__animated animate__shakeX animate__infinite">From Atiq</h1>
+        <button 
+        class= "p-2 bg-slate-600 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-2s animate__tada" onclick="ubahkartu()">Klik di sini ya</button>
+    </div>
+
+    <script
+            src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@4.3.1/tsparticles.confetti.bundle.min.js"></script>
+            <script>confetti({
+  particleCount: 100,
+  spread: 70,
+  origin: { y: .6 },
+});
+let kartu = document.getElementById("kartu");
+
+function ubahkartu() {
+    kartu.innerHTML = `
+        <h1 class="font-semibold text-wrap animate__animated animate__zoomIn">
+            Happy 21st Birthday! 🥳🎂<br><br>
+
+            Akhirnya dah 21 tahun dah. Semoga tahun ni jadi tahun yang paling best untuk kau. Aku doakan semoga kau sentiasa sihat, bahagia, dimurahkan rezeki, dipermudahkan segala urusan, dan berjaya capai apa yang kau impikan.<br><br>
+
+            Terima kasih sebab jadi kawan yang baik selama ni. Semoga kita terus berkawan sampai bila-bila dan dapat cipta lagi banyak kenangan sama-sama. Jangan lupa enjoy hidup, tapi tetap jaga diri dan buat keputusan yang terbaik.<br><br>
+
+           
+        </h1>
+
+        <h2 class="mt-3 animate__animated animate__fadeIn">
+            - Dari: Atiq -
+        </h2>
+        <button 
+        class= "p-2 bg-blue-900 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-2s animate__tada" onclick="refresh()">Tutup</button>
+    `;
+    
+}
+function refresh(){
+        location.reload();
+    }
+
+</script>
+           
+</body>
+</html>
